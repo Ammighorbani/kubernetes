@@ -1,6 +1,6 @@
 ## You can manage and categorize your pods with namespaces for example base on teams or base on organizations
 
-### You can see your namespaces
+### 1- You can see your namespaces
 ```bash
 kubectl get namespaces
 ```
@@ -11,7 +11,7 @@ kubectl get ns
 
 ---
 
-### You can create your own namespaces
+### 2- You can create your own namespaces
 
 ```bash
 kubectl create namespace dev
@@ -23,3 +23,31 @@ kubectl create namespace dev
 
 ---
 
+### 3- You can remove namespaces
+```bash
+kubectl delete ns dev
+```
+
+---
+
+### 4- You can create namespaces with manifest using yaml, yml files
+```yml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: my-ns
+```
+
+#### Note: Each manifest file must have `apiVersion`, `kind`, `metadata` and `spec` but you can don't use
+
+**Apply**
+```bash
+kubectl apply -f ns.myl
+```
+
+--- 
+
+### 5- You can delete your things you have created with manifest file
+```bash
+kubectl delete -f ns.yml
+```

@@ -22,7 +22,7 @@ kubectl get node -o wide
 
 ### 3- See whole cluster namespaces
 ```bash
-kubectl get namespace
+kubectl get namespaces
 ```
 
 ```bash
@@ -45,7 +45,7 @@ kubectl api-resources
 
 ---
 
-### 6- Fix completion
+### 6- Fix kubectl completion
 **Use `kubectl completion --help` command to see configuration guidlines based on your shell**
 
 ```bash
@@ -56,4 +56,18 @@ kubectl completion bash > /etc/bash_completion.d/kubectl
 
 ---
 
-### 7- 
+### 7- Fix kubeadm completion
+**Use `kubeadm completion --help` command to see configuration guidlines based on your shell**
+
+```bash
+kubeadm completion bash > /etc/bash_completion.d/kubeadm
+```
+
+#### Note: One time reload your shell
+
+---
+
+### 8- You can fallow your commands
+```bash
+kubectl get pod -n my-ns -w
+```

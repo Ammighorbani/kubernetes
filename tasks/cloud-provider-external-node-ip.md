@@ -1,0 +1,1 @@
+### Create a simple kaas or cloud provider, initiate your cluster without ip and with name in --apiserver-advertise-address and put that name as an public ip address to solve it 

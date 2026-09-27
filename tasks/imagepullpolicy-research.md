@@ -1,0 +1,1 @@
+### Research about image pull policies

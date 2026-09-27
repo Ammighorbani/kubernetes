@@ -71,3 +71,19 @@ kubeadm completion bash > /etc/bash_completion.d/kubeadm
 ```bash
 kubectl get pod -n my-ns -w
 ```
+
+---
+
+### 9- You can see your nodes labels
+```bash
+kubectl get nodes --show-labels
+```
+
+---
+
+### 10- You can create new labels for your nodes
+```bash
+kubectl label nodes [NODE-NAME] [LABEL]
+
+kubectl label nodes k8s-3 kubernetes.io/disk=ssd
+```

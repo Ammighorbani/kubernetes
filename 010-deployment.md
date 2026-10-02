@@ -65,3 +65,46 @@ kubectl delete -n [NS-NAME] deployment [DP-NAME]
 kubectl delete -f dp.yml
 kubectl delete -f [DP-MANIFEST].yml
 ```
+
+---
+
+### 9- You can rollout/rollback your deployment
+**You can rollback your deployment to each last versions but you need to know how many version your deployment have and know information about each version**
+
+**See rollout history:**
+```bash
+kubectl rollout history -n my-ns deployment myapp
+
+kubectl rollout history -n [NS-NAME] deployment [DP-NAME]
+```
+
+**Check each revision information:**
+```bash
+kubectl rollout history -n my-ns deployment myapp --revision 1
+
+kubectl rollout history -n [NS-NAME] deployment [DP-NAME] --revision [NUMBER]
+```
+
+**Rolle back:**
+```bash
+kubectl rollout undo -n my-ns deployment myapp --to-revision 1
+
+kubectl rollout undo -n [NS-NAME] deployment [DP-NUMBER] --to-revision [NUMBER]
+```
+
+---
+
+### 10- You can autoscale your deployment
+```bash
+kubectl autoscale -n my-ns deployment myapp --cpu=20 --min=4 --max=10
+
+kubectl autoscale -n [NS-NAME] deployment [DP-NAME] --cpu=[PERCENT-NUMBER] --min=[NUMBER] --max=[NUMBER]
+```
+
+---
+
+### 11- You can see your hpa
+```bash
+kubectl get hpa -n my-ns
+kubectl get hpa -n [NS-NAME]
+```

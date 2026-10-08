@@ -87,3 +87,21 @@ kubectl label nodes [NODE-NAME] [LABEL]
 
 kubectl label nodes k8s-3 kubernetes.io/disk=ssd
 ```
+
+---
+
+### 11- You can copy something from your pod to your cluster
+```bash
+kubectl cp -n my-ns nginx-5720497ksf-497bdv:/etc/nginx/nginx.conf nginx.conf
+
+kubectl cp -n [NS-NAME] [POD-NAME] [DEST-NAME]
+```
+
+---
+
+### 12- You can see whole events or problems
+```bash
+kubectl events -n my-ns
+
+kubectl events -n [NS-NAME]
+```
